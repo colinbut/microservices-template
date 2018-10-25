@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: microservices-template
+  output:
+    ansi:
+      enabled: ALWAYS
+
+server:
+  port: ${PORT:0}
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    git:
+      mode: full
