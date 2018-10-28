@@ -24,12 +24,12 @@ public class GreetingsRepository {
     public void init() {
         LOGGER.info("Setting up greetings");
 
-        greetings.add(new Greeting("Hello, ", ""));
-        greetings.add(new Greeting("Welcome, ", ""));
-        greetings.add(new Greeting("Li Hao, ", ""));
-        greetings.add(new Greeting("Weikomen, ", ""));
-        greetings.add(new Greeting("Bonjour, ", ""));
-        greetings.add(new Greeting("Hola, ", ""));
+        greetings.add(new Greeting("Hello, ", "Stay in bed and dream or get out and chase them!"));
+        greetings.add(new Greeting("Welcome, ", "The sky’s the limit, only if you believe it is"));
+        greetings.add(new Greeting("Li Hao, ", "Begin this day with a smile on your face"));
+        greetings.add(new Greeting("Weikomen, ", "Mornings are too beautiful for regrets"));
+        greetings.add(new Greeting("Bonjour, ", "Wish all your friends good morning!"));
+        greetings.add(new Greeting("Hola, ", "Think of all the people who make you happy!"));
 
         LOGGER.info("Populated greetings {}", greetings);
     }
