@@ -31,7 +31,7 @@ public class GreetingService {
 
         LOGGER.info("Fetched greeting {} from storage", greeting);
 
-        greeting.setGreet(String.format(GREETING_LINE_FORMAT, greeting.getGreet() , name));
-        return greeting;
+        // defensive copy to prevent source model objetc from being mutated
+        return new Greeting(String.format(GREETING_LINE_FORMAT, greeting.getGreet() , name), greeting.getMessage());
     }
 }
