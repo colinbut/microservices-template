@@ -23,11 +23,10 @@ Currently gradle is not supported but maybe in the future. Watch this space.
 
 See `.travis.yml` which is a config file for defining build settings on Travis CI.
 
-Currently, only Travis CI is supported. 
+Currently, only Travis CI and Jenkins 2.0+ are supported. 
 
 In the future, I am looking to offer support for:
 
-- Jenkins 2.0+
 - Circle CI
 - Semaphore
 
