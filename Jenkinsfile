@@ -1,4 +1,5 @@
 pipeline {
+    //agent any
     agent { 
         docker { 
             image 'maven:3.3.3' 
@@ -14,6 +15,8 @@ pipeline {
     post {
         always {
             echo 'Build finished.'
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            junit 'target/surefire-reports/*.xml'
         }
         success {
             echo 'The build succeeded'
