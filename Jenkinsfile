@@ -5,6 +5,11 @@ pipeline {
             image 'maven:3.3.3' 
         } 
     }
+
+    /** 
+     * Multiple stages that gets run on Jenkins to build & test the merged code
+     * This practice is called CI (Continous Integration)
+     */
     stages {
         stage('Build') {
             steps {
@@ -24,13 +29,24 @@ pipeline {
         stage('Deploy - Staging') {
             steps {
                 sh './deploy.sh staging'
+                sh './run-e2e-tests.sh'
             }
         }
+
+        /**
+         * Every successful build of a commit (or merge to be precise) is a RC (Release Candidate).
+         * This is known as CD (Continous Delivery)
+         */
         stage('Sanity Check') {
             steps {
                 input "Does the Staging environment look good?"
             }
         }
+        
+        /**
+         * Automatically deploy to Production environment after running e2e tests on the Staging environment
+         * This practice is called CD (Continous Deployment)
+         */ 
         stage('Deploy - Production') {
             steps {
                 sh './deploy.sh production'
