@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Edit this script to define how you want to deploy to your environments.
+# The below script content acts as for reference
+
 let DEV="dev"
 let STAGING="staging"
 let PRODUCTION="production"
