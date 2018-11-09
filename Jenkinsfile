@@ -6,19 +6,29 @@ pipeline {
         } 
     }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'mvn clean compile'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-        stage('deploy') {
+        stage('Packaging') {
             steps {
-                sh 'mvn package'
+                sh 'mvn install'
+            }
+        }
+        stage('Deploy - Staging') {
+            steps {
+                sh './deploy.sh staging'
+            }
+        }
+        stage('Deploy - Production') {
+            steps {
+                sh './deploy.sh production'
             }
         }
     }
@@ -51,13 +61,18 @@ pipeline {
         failure {
             echo 'The build failed'
             
+            // Comment/Uncomment the ones you would need/use
+
+            // Send email
             mail to: 'colin.but@email.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                  body: "Something went wrong with ${env.BUILD_URL}"
 
+            // Atlassian Hipchat Integration
             hipchatSend message: "@here ${env.JOB_NAME} #${env.BUILD_NUMBER} has failed.", 
                         color: 'RED'
 
+            // Slack Integration
             slackSend channel: '#room',
                       color: 'bad',
                       message: "${env.JOB_NAME} #${env.BUILD_NUMBER} has failed."
