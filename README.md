@@ -5,15 +5,15 @@ This repo contains a skeleton template for creating new microservices.
 It is an opinionated template where certain technology/tool/framework choice gears towards a certain direction.
 
 - [Microservices Template](#microservices-template)
-        - [<a name="programming-language"></a>Programming Language](#a-name%22programming-language%22aprogramming-language)
-        - [<a name="application-framework"></a>Application Framework](#a-name%22application-framework%22aapplication-framework)
-        - [<a name="build"></a>Build](#a-name%22build%22abuild)
-        - [<a name="continous-integration"></a>Continuous Integration (CI)](#a-name%22continous-integration%22acontinuous-integration-ci)
-        - [<a name="infrastructure-as-code"></a>Infrastructure As Code](#a-name%22infrastructure-as-code%22ainfrastructure-as-code)
-        - [<a name="deploymemt"></a>Deploymemt](#a-name%22deploymemt%22adeploymemt)
-            - [<a name="docker"></a>Docker](#a-name%22docker%22adocker)
-            - [<a name="kubernetes"></a>Kubernetes](#a-name%22kubernetes%22akubernetes)
-        - [<a name="api-documentation"></a>API Documentation](#a-name%22api-documentation%22aapi-documentation)
+        - [Programming Language](#programming-language)
+        - [Application Framework](#application-framework)
+        - [Build](#build)
+        - [Continuous Integration (CI)](#continuous-integration)
+        - [Infrastructure As Code](#infrastructure-as-code)
+        - [Deploymemt](#deploymemt)
+            - [Docker](#docker)
+            - [Kubernetes](#kubernetes)
+        - [API Documentation](#api-documentation)
 
 ### <a name="programming-language"></a>Programming Language
 
