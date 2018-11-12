@@ -4,16 +4,16 @@ This repo contains a skeleton template for creating new microservices.
 
 It is an opinionated template where certain technology/tool/framework choice gears towards a certain direction.
 
-- [Microservices Template](#microservices-template)
-        - [Programming Language](#programming-language)
-        - [Application Framework](#application-framework)
-        - [Build](#build)
-        - [Continuous Integration (CI)](#continuous-integration)
-        - [Infrastructure As Code](#infrastructure-as-code)
-        - [Deploymemt](#deploymemt)
-            - [Docker](#docker)
-            - [Kubernetes](#kubernetes)
-        - [API Documentation](#api-documentation)
+* [Microservices Template](#microservices-template)
+* [Programming Language](#programming-language)
+* [Application Framework](#application-framework)
+* [Build](#build)
+* [Continuous Integration (CI)](#continuous-integration)
+* [Infrastructure As Code](#infrastructure-as-code)
+* [Deploymemt](#deploymemt)
+    * [Docker](#docker)
+    * [Kubernetes](#kubernetes)
+* [API Documentation](#api-documentation)
 
 ### <a name="programming-language"></a>Programming Language
 
