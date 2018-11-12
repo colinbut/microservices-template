@@ -4,7 +4,6 @@ This repo contains a skeleton template for creating new microservices.
 
 It is an opinionated template where certain technology/tool/framework choice gears towards a certain direction.
 
-* [Microservices Template](#microservices-template)
 * [Programming Language](#programming-language)
 * [Application Framework](#application-framework)
 * [Build](#build)
