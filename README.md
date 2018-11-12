@@ -4,22 +4,33 @@ This repo contains a skeleton template for creating new microservices.
 
 It is an opinionated template where certain technology/tool/framework choice gears towards a certain direction.
 
-### Programming Language
+- [Microservices Template](#microservices-template)
+        - [<a name="programming-language"></a>Programming Language](#a-name%22programming-language%22aprogramming-language)
+        - [<a name="application-framework"></a>Application Framework](#a-name%22application-framework%22aapplication-framework)
+        - [<a name="build"></a>Build](#a-name%22build%22abuild)
+        - [<a name="continous-integration"></a>Continuous Integration (CI)](#a-name%22continous-integration%22acontinuous-integration-ci)
+        - [<a name="infrastructure-as-code"></a>Infrastructure As Code](#a-name%22infrastructure-as-code%22ainfrastructure-as-code)
+        - [<a name="deploymemt"></a>Deploymemt](#a-name%22deploymemt%22adeploymemt)
+            - [<a name="docker"></a>Docker](#a-name%22docker%22adocker)
+            - [<a name="kubernetes"></a>Kubernetes](#a-name%22kubernetes%22akubernetes)
+        - [<a name="api-documentation"></a>API Documentation](#a-name%22api-documentation%22aapi-documentation)
+
+### <a name="programming-language"></a>Programming Language
 
 - Java 8
 
-### Application Framework
+### <a name="application-framework"></a>Application Framework
 
 - Spring Boot 2.0+
 
-### Build
+### <a name="build"></a>Build
 
 Using maven project management system as the build system/tool. 
 Maven wrapper is used so that no need to install Maven on your machine beforehand. Lets maven wrapper take care of maven.
 
 Currently gradle is not supported but maybe in the future. Watch this space.
 
-### Continuous Integration (CI)
+### <a name="continous-integration"></a>Continuous Integration (CI)
 
 See `.travis.yml` which is a config file for defining build settings on Travis CI.
 
@@ -30,13 +41,13 @@ In the future, I am looking to offer support for:
 - Circle CI
 - Semaphore
 
-### Infrastructure As Code
+### <a name="infrastructure-as-code"></a>Infrastructure As Code
 
 A bunch of Terraform files.
 
-### Deploymemt
+### <a name="deploymemt"></a>Deploymemt
 
-#### Docker
+#### <a name="docker"></a>Docker
 
 See `Dockerfile` in the root of the project directory.
 
@@ -52,7 +63,7 @@ or execute Docker directly:
 docker build -t microservices-template:1.0.0-SNAPSHOT .
 ```
 
-#### Kubernetes
+#### <a name="kubernetes"></a>Kubernetes
 
 Using an container orchestration framework to manage the containers.
 
@@ -60,7 +71,7 @@ Using an container orchestration framework to manage the containers.
 kubectl apply -f deployment/microservices-template.yml
 ```
 
-### API Documentation
+### <a name="api-documentation"></a>API Documentation
 
 Access Swagger on:
 
