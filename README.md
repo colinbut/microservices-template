@@ -9,7 +9,7 @@ It is an opinionated template where certain technology/tool/framework have been 
 * [Build](#build)
 * [Continuous Integration (CI)](#continuous-integration)
 * [Continuous Delivery (CD)](#continuous-delivery)
-* [Continuous Deployment (CI)](#continuous-deployment)
+* [Continuous Deployment (CD)](#continuous-deployment)
 * [Infrastructure As Code](#infrastructure-as-code)
 * [Deploymemt](#deploymemt)
     * [Docker](#docker)
@@ -26,22 +26,19 @@ It is an opinionated template where certain technology/tool/framework have been 
 
 ### <a name="build"></a>Build
 
-Using maven project management system as the build system/tool. 
+Both Maven and Gradle are supported. However, Maven is currently the main build system used for this project to manage the release.
+
+__Maven__
 Maven wrapper is used so that no need to install Maven on your machine beforehand. Lets maven wrapper take care of maven.
 
-Currently gradle is not supported but maybe in the future. Watch this space.
+__Gradle__
+Just like Maven, Gradle offers the Gradle wrapper is used so that no need to install Gradle on your machine beforehand.
 
 ### <a name="continous-integration"></a>Continuous Integration (CI)
 
-See `.travis.yml` which is a config file for defining build settings on Travis CI.
 See `Jenkinsfile` which is a config file for defining build settings on Jenkins 2.0+ (with the use of Pipelines).
 
-Currently, only Travis CI and Jenkins 2.0+ are supported. 
-
-In the future, I am looking to offer support for:
-
-- Circle CI
-- Semaphore
+Only Jenkins 2.0+ is supported.
 
 ### <a name="continous-delivery"></a>Continuous Delivery (CD)
 
@@ -62,9 +59,10 @@ to be deloyed onto Production. (Artifact/Pipeline promotion).
 
 ### <a name="infrastructure-as-code"></a>Infrastructure As Code
 
-A bunch of Terraform files.
+To implement IAC, Terraform is used. You can place your terraform files in the `terraform` directory.
+This template assumes the project will be deployed onto the Cloud or to any other infrastructure that is supported by Terraform.
 
-For implementing IAC, we use Hashicorp's Terraform.
+If deploying to a bare metal physical server machine or to Virtual Machines, one might decide to use a configuration management tool such as Ansible, Puppet, or Chef a like to automate the provisioning of the infrastructure instead. Currently this template does not offer support for this. As normally, these deployment methods normally reside in a separate source code repository hence this subject matter is out of the scope of this template project.
 
 ### <a name="deploymemt"></a>Deploymemt
 
@@ -86,7 +84,7 @@ docker build -t microservices-template:1.0.0-SNAPSHOT .
 
 #### <a name="kubernetes"></a>Kubernetes
 
-Using an container orchestration framework to manage the containers.
+Using an container orchestration framework to manage the containers. This template project is opinionated towards Kubernetes. It is to note that other container orchestration platforms exists (Apache Mesos on DC/OS, Docker Swarm etc).
 
 ```bash
 kubectl apply -f deployment/microservices-template.yml
