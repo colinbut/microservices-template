@@ -28,10 +28,10 @@ It is an opinionated template where certain technology/tool/framework have been 
 
 Both Maven and Gradle are supported. However, Maven is currently the main build system used for this project to manage the release.
 
-__Maven__
+__Maven__  
 Maven wrapper is used so that no need to install Maven on your machine beforehand. Lets maven wrapper take care of maven.
 
-__Gradle__
+__Gradle__  
 Just like Maven, Gradle offers the Gradle wrapper is used so that no need to install Gradle on your machine beforehand.
 
 ### <a name="continous-integration"></a>Continuous Integration (CI)
@@ -84,7 +84,7 @@ docker build -t microservices-template:1.0.0-SNAPSHOT .
 
 #### <a name="kubernetes"></a>Kubernetes
 
-Using an container orchestration framework to manage the containers. This template project is opinionated towards Kubernetes. It is to note that other container orchestration platforms exists (Apache Mesos on DC/OS, Docker Swarm etc).
+Using an container orchestration framework to manage the containers. This template project is opinionated towards Kubernetes. It is to note that other container orchestration platforms exists (Docker Swarm, Nomad with Consul, Apache Mesos on DC/OS etc).
 
 ```bash
 kubectl apply -f deployment/microservices-template.yml
