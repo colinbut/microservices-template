@@ -6,7 +6,7 @@ spring:
       enabled: ALWAYS
 
 server:
-  port: ${PORT:0}
+  port: 8080
 
 management:
   security:
