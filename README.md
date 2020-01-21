@@ -1,9 +1,12 @@
 # Microservices Template
 
+++ Note: This project is still WIP ++
+
 This repo contains a skeleton template for creating new microservices. 
 
 It is an opinionated template where certain technology/tool/framework have been chosen...
 
+* [High Level Architecture](#high-level-architecture)
 * [Programming Language](#programming-language)
 * [Application Framework](#application-framework)
 * [Build](#build)
@@ -15,6 +18,10 @@ It is an opinionated template where certain technology/tool/framework have been 
     * [Docker](#docker)
     * [Kubernetes](#kubernetes)
 * [API Documentation](#api-documentation)
+
+### <a name="high-level-architecture"></a>High Level Architecture
+
+![microservices-template](https://images-for-github-colinbut.s3.eu-west-2.amazonaws.com/microservices-template/microservices-template.png)
 
 ### <a name="programming-language"></a>Programming Language
 
