@@ -13,17 +13,25 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                sh './mvnw clean compile'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh './mvnw test'
             }
         }
         stage('Packaging') {
             steps {
-                sh 'mvn install'
+                sh './mvnw package -DskipTests=true'
+            }
+        }
+        stage ('Static Code Analysis') {
+            steps {
+                // required SonarQube server configured in Jenkins System Configuration
+                withSonarQubeEnv(credentialsId: 'sonarqube-credentials', installationName: 'MySonarQubeServer') {
+                    sh './mvnw sonar:sonar'
+                }
             }
         }
         stage('Deploy - Staging') {
