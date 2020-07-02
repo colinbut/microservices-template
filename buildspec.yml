@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - mvn install
+  post_build:
+    commands:
+      - echo Build finished
